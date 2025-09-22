@@ -1,0 +1,154 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const projects = [
+  {
+    id: 1,
+    image: "/images/projects/project1.png",
+    title: "Assembly Line Station",
+    description: "Precision-engineered automated assembly systems designed for optimal manufacturing throughput and quality assurance.",
+    dataKey: "assembly"
+  },
+  {
+    id: 2,
+    image: "/images/projects/project2.png",
+    title: "Quality Verification System",
+    description: "Advanced metrology and inspection systems ensuring compliance with stringent industry specifications and regulatory requirements.",
+    dataKey: "quality"
+  },
+  {
+    id: 3,
+    image: "/images/projects/project3.png",
+    title: "Material Handling",
+    description: "Integrated material transport systems engineered for seamless workflow optimization and operational efficiency.",
+    dataKey: "material"
+  },
+  {
+    id: 4,
+    image: "/images/projects/project4.png",
+    title: "PLC Programming",
+    description: "Advanced Siemens PLC programming and industrial automation solutions for complex manufacturing environments.",
+    dataKey: "plc"
+  },
+  {
+    id: 5,
+    image: "/images/projects/project5.png",
+    title: "Educational Solutions",
+    description: "Professional training systems and educational automation platforms for technical skill development and certification programs.",
+    dataKey: "educational"
+  },
+  {
+    id: 6,
+    image: "/images/projects/project6.png",
+    title: "Custom Tooling",
+    description: "Precision-manufactured fixtures and specialized tooling solutions designed for enhanced productivity and dimensional accuracy.",
+    dataKey: "tooling"
+  }
+];
+---
+
+<Layout title="Our Portfolio - MAGNUM TECHNOLOGY">
+	<Header />
+	<main class="pt-20">
+		<section class="py-20 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-text="portfolioPage-title">
+						PORTFOLIO
+					</h1>
+					<p class="text-xl text-gray-600 max-w-4xl mx-auto" data-text="portfolioPage-subtitle">
+						Magnum Technology has established strategic partnerships with industry clients to deliver
+						comprehensive engineering solutions that drive operational excellence and measurable performance improvements.
+						Our portfolio demonstrates technical precision, systematic engineering methodologies, and
+						strict adherence to international quality standards across all project deliverables.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+					{projects.map((project) => (
+						<div class="group">
+							<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+								<div class="aspect-[4/3] overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 relative">
+									<div class="absolute inset-0 bg-white/20"></div>
+									<img
+										src={project.image}
+										alt={project.title}
+										class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 mix-blend-multiply opacity-90 group-hover:opacity-100"
+										loading="lazy"
+									/>
+									<div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+								</div>
+								<div class="p-6 bg-white">
+									<h3 class="text-lg font-semibold text-gray-900 mb-2" data-text={`portfolioPage-projects-${project.dataKey}-title`}>{project.title}</h3>
+									<p class="text-gray-600 text-sm leading-relaxed" data-text={`portfolioPage-projects-${project.dataKey}-description`}>{project.description}</p>
+								</div>
+							</div>
+						</div>
+					))}
+				</div>
+
+				<div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+					<h2 class="text-2xl font-bold text-gray-900 mb-6 text-center" data-text="portfolioPage-highlights">
+						Engineering Excellence
+					</h2>
+					<div class="grid md:grid-cols-2 gap-8">
+						<div>
+							<h3 class="text-lg font-semibold text-gray-900 mb-4" data-text="portfolioPage-industriesServed">Industry Partnerships</h3>
+							<div class="grid grid-cols-2 gap-4">
+								<div class="flex items-center">
+									<div class="w-3 h-3 bg-gray-700 rounded-full mr-3"></div>
+									<span class="text-gray-600">Advanced Manufacturing</span>
+								</div>
+								<div class="flex items-center">
+									<div class="w-3 h-3 bg-gray-600 rounded-full mr-3"></div>
+									<span class="text-gray-600">Automotive</span>
+								</div>
+								<div class="flex items-center">
+									<div class="w-3 h-3 bg-gray-500 rounded-full mr-3"></div>
+									<span class="text-gray-600">Construction</span>
+								</div>
+								<div class="flex items-center">
+									<div class="w-3 h-3 bg-gray-800 rounded-full mr-3"></div>
+									<span class="text-gray-600">Electronics</span>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<h3 class="text-lg font-semibold text-gray-900 mb-4" data-text="portfolioPage-keyTechnologies">Key Technologies</h3>
+							<div class="space-y-2">
+								<div class="flex items-center">
+									<svg class="w-4 h-4 text-gray-700 mr-3" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-600" data-text="portfolioPage-technologies-solidworks">SolidWorks 3D Modeling</span>
+								</div>
+								<div class="flex items-center">
+									<svg class="w-4 h-4 text-gray-700 mr-3" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-600" data-text="portfolioPage-technologies-eplan">E-plan Electrical Design</span>
+								</div>
+								<div class="flex items-center">
+									<svg class="w-4 h-4 text-gray-700 mr-3" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-600" data-text="portfolioPage-technologies-siemens">Siemens PLC Programming</span>
+								</div>
+								<div class="flex items-center">
+									<svg class="w-4 h-4 text-gray-700 mr-3" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-600" data-text="portfolioPage-technologies-automation">Automation Systems</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>

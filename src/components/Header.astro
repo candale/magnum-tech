@@ -1,0 +1,355 @@
+---
+---
+
+<header class="bg-white/95 backdrop-blur-sm border-b border-gray-100 fixed w-full top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <div class="flex-shrink-0">
+        <a href="/" class="flex items-center space-x-3">
+          <div class="relative">
+            <div class="w-10 h-10 bg-gradient-to-br from-gray-900 to-gray-700 rounded-xl flex items-center justify-center shadow-sm">
+              <div class="text-white font-bold text-lg">M</div>
+            </div>
+            <div class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-gray-400 rounded-full"></div>
+          </div>
+          <div>
+            <div class="text-xl font-bold text-gray-900">MAGNUM</div>
+            <div class="text-xs text-gray-500 -mt-1">TECHNOLOGY</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="flex items-center space-x-6">
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-8">
+            <a href="/" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors" data-text="nav-home">Home</a>
+            <a href="/about" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors" data-text="nav-about">About</a>
+            <a href="/portfolio" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors" data-text="nav-portfolio">Portfolio</a>
+            <a href="/contact" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors" data-text="nav-contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <button id="lang-en" class="px-3 py-1 text-sm font-medium text-gray-900 bg-gray-100 rounded-md transition-colors">EN</button>
+          <button id="lang-ro" class="px-3 py-1 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors">RO</button>
+        </div>
+      </div>
+
+      <div class="md:hidden">
+        <button type="button" class="text-gray-600 hover:text-gray-900" id="mobile-menu-button">
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-100">
+        <a href="/" class="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium" data-text="nav-home">Home</a>
+        <a href="/about" class="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium" data-text="nav-about">About</a>
+        <a href="/portfolio" class="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium" data-text="nav-portfolio">Portfolio</a>
+        <a href="/contact" class="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium" data-text="nav-contact">Contact</a>
+        <div class="flex space-x-2 px-3 py-2">
+          <button id="mobile-lang-en" class="px-3 py-1 text-sm font-medium text-gray-900 bg-gray-100 rounded-md transition-colors">EN</button>
+          <button id="mobile-lang-ro" class="px-3 py-1 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors">RO</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  document.getElementById('mobile-menu-button')?.addEventListener('click', () => {
+    const menu = document.getElementById('mobile-menu');
+    menu?.classList.toggle('hidden');
+  });
+
+  // Language switching functionality
+  function switchLanguage(lang) {
+    // Store language preference
+    localStorage.setItem('language', lang);
+
+    // Update button states
+    const enButtons = document.querySelectorAll('#lang-en, #mobile-lang-en');
+    const roButtons = document.querySelectorAll('#lang-ro, #mobile-lang-ro');
+
+    if (lang === 'en') {
+      enButtons.forEach(btn => {
+        btn.classList.remove('text-gray-600', 'hover:text-gray-900', 'hover:bg-gray-100');
+        btn.classList.add('text-gray-900', 'bg-gray-100');
+      });
+      roButtons.forEach(btn => {
+        btn.classList.remove('text-gray-900', 'bg-gray-100');
+        btn.classList.add('text-gray-600', 'hover:text-gray-900', 'hover:bg-gray-100');
+      });
+    } else {
+      roButtons.forEach(btn => {
+        btn.classList.remove('text-gray-600', 'hover:text-gray-900', 'hover:bg-gray-100');
+        btn.classList.add('text-gray-900', 'bg-gray-100');
+      });
+      enButtons.forEach(btn => {
+        btn.classList.remove('text-gray-900', 'bg-gray-100');
+        btn.classList.add('text-gray-600', 'hover:text-gray-900', 'hover:bg-gray-100');
+      });
+    }
+
+    // Update page content
+    updatePageContent(lang);
+  }
+
+  // Language switching event listeners
+  document.querySelectorAll('#lang-en, #mobile-lang-en').forEach(btn => {
+    btn.addEventListener('click', () => switchLanguage('en'));
+  });
+
+  document.querySelectorAll('#lang-ro, #mobile-lang-ro').forEach(btn => {
+    btn.addEventListener('click', () => switchLanguage('ro'));
+  });
+
+  // Initialize language buttons on page load
+  const savedLang = localStorage.getItem('language') || 'en';
+  const currentLang = savedLang;
+
+  const enButtons = document.querySelectorAll('#lang-en, #mobile-lang-en');
+  const roButtons = document.querySelectorAll('#lang-ro, #mobile-lang-ro');
+
+  // Initialize the page with saved language
+  switchLanguage(currentLang);
+
+  function updatePageContent(lang) {
+    const translations = {
+      en: {
+        // Navigation
+        'nav-home': 'Home',
+        'nav-about': 'About',
+        'nav-portfolio': 'Portfolio',
+        'nav-contact': 'Contact',
+
+        // Hero section
+        'hero-title': 'MAGNUM TECHNOLOGY',
+        'hero-subtitle': 'Engineering Excellence Through Innovation',
+        'hero-contact': 'Contact Us',
+
+        // About section
+        'about-title': 'Who We Are',
+        'about-text1': 'Magnum Technology specializes in advanced technology and automation systems. Our expertise drives measurable results for clients across diverse industries.',
+        'about-text2': 'We deliver comprehensive engineering solutions through innovative design methodologies and rigorous quality standards. Our commitment to precision and functionality ensures optimal performance for every client engagement.',
+
+        // Services section
+        'services-title': 'Engineering Services',
+        'services-subtitle': 'Advanced Virtual Engineering & Competitive Manufacturing Solutions',
+        'services-competencies': 'Core Competencies',
+        'services-industries': 'Industry Sectors',
+        'services-capabilities': 'Technical Capabilities',
+
+        // Projects section
+        'projects-title': 'PROJECT SAMPLES',
+        'projects-subtitle': 'Showcasing our engineering excellence through innovative solutions and precision craftsmanship',
+        'projects-view-all': 'View All Projects',
+
+        // Contact section
+        'contact-text': 'Magnum Technology delivers comprehensive engineering solutions that meet stringent industry standards and client specifications across multiple technical disciplines.',
+        'contact-form-title': 'Professional Consultation',
+        'contact-form-subtitle': 'Request Technical Information',
+        'contact-name': 'Name',
+        'contact-phone': 'Phone',
+        'contact-company': 'Company',
+        'contact-email': 'Email',
+        'contact-position': 'Position',
+        'contact-send': 'Send Message',
+
+        // About page
+        'aboutPage-title': 'ABOUT US',
+        'aboutPage-commitment': 'Committed to Excellence',
+        'aboutPage-text1': 'Magnum Technology specializes in developing customized engineering solutions through rigorous technical analysis and precision manufacturing methodologies.',
+        'aboutPage-text2': 'Our engineering teams deliver comprehensive design solutions that meet stringent industry standards and client specifications across multiple sectors.',
+        'aboutPage-contactButton': 'CONTACT US',
+        'aboutPage-coreStrength': 'Our Core Strength',
+        'aboutPage-strength1': 'Conduct comprehensive technical assessments through strategic collaboration with client organizations at executive and operational levels',
+        'aboutPage-strength2': 'Design and develop engineering solutions with complete technical documentation, including precision drawings and manufacturing specifications',
+        'aboutPage-strength3': 'Provide technical oversight and engineering support throughout the production lifecycle to ensure quality standards',
+        'aboutPage-strength4': 'Direct subcontractor coordination and project management to ensure timely delivery and technical compliance',
+        'aboutPage-strength5': 'Maintain rigorous project discipline with systematic organization, precision execution, and clear stakeholder communication',
+        'aboutPage-credentials': 'Credentials',
+        'aboutPage-qualifications': 'Qualifications',
+        'aboutPage-qualification1': '• Certified Mechanical Design Engineer',
+        'aboutPage-qualification2': '• Master of Science: Virtual Engineering and Competitive Manufacturing',
+        'aboutPage-qualification3': '• Bachelor of Mechanical Engineering: Machine Building',
+        'aboutPage-qualification4': '• 13+ years of experience',
+        'aboutPage-globalExperience': 'Global Experience',
+        'aboutPage-globalExperienceText': 'Romania (Cluj, Sibiu, Oradea, Bistrița, Bucharest), United Kingdom, Austria, Spain, China, UAE',
+        'aboutPage-partnerCompanies': 'Partner Companies',
+        'aboutPage-partnerCompaniesText': 'Emerson, Accenture, Bosch, NTT, ULMA Packaging, TURBOMECANICA, CSi Romania, GRUPO PACADAR, Tehnosteel Industry SRL, Bertrandt Group',
+
+        // Portfolio page
+        'portfolioPage-title': 'PORTFOLIO',
+        'portfolioPage-subtitle': 'Magnum Technology has established strategic partnerships with industry clients to deliver comprehensive engineering solutions that drive operational excellence and measurable performance improvements. Our portfolio demonstrates technical precision, systematic engineering methodologies, and strict adherence to international quality standards across all project deliverables.',
+        'portfolioPage-highlights': 'Engineering Excellence',
+        'portfolioPage-industriesServed': 'Industry Partnerships',
+        'portfolioPage-keyTechnologies': 'Key Technologies',
+        'portfolioPage-projects-assembly-title': 'Assembly Line Station',
+        'portfolioPage-projects-assembly-description': 'Precision-engineered automated assembly systems designed for optimal manufacturing throughput and quality assurance.',
+        'portfolioPage-projects-quality-title': 'Quality Verification System',
+        'portfolioPage-projects-quality-description': 'Advanced metrology and inspection systems ensuring compliance with stringent industry specifications and regulatory requirements.',
+        'portfolioPage-projects-material-title': 'Material Handling',
+        'portfolioPage-projects-material-description': 'Integrated material transport systems engineered for seamless workflow optimization and operational efficiency.',
+        'portfolioPage-projects-plc-title': 'PLC Programming',
+        'portfolioPage-projects-plc-description': 'Advanced Siemens PLC programming and industrial automation solutions for complex manufacturing environments.',
+        'portfolioPage-projects-educational-title': 'Educational Solutions',
+        'portfolioPage-projects-educational-description': 'Professional training systems and educational automation platforms for technical skill development and certification programs.',
+        'portfolioPage-projects-tooling-title': 'Custom Tooling',
+        'portfolioPage-projects-tooling-description': 'Precision-manufactured fixtures and specialized tooling solutions designed for enhanced productivity and dimensional accuracy.',
+        'portfolioPage-technologies-solidworks': 'SolidWorks 3D Modeling',
+        'portfolioPage-technologies-eplan': 'E-plan Electrical Design',
+        'portfolioPage-technologies-siemens': 'Siemens PLC Programming',
+        'portfolioPage-technologies-automation': 'Automation Systems',
+
+        // Contact page
+        'contact-page-title': 'CONTACT US',
+        'contact-page-subtitle': 'Initiate your engineering project consultation with our technical specialists. We provide comprehensive project assessment, technical specifications review, and strategic implementation planning.',
+        'contact-consultation-title': 'Technical Consultation',
+        'contact-info-phone': 'Phone',
+        'contact-info-phoneAction': 'Schedule consultation',
+        'contact-info-email': 'Email',
+        'contact-info-emailAction': 'Request project information',
+        'contact-info-response': 'Response Time',
+        'contact-info-responseText': 'Professional response within 24 hours',
+        'contact-form-inquiry': 'Project Inquiry',
+        'contact-message': 'Message',
+        'contact-excellence-title': 'Engineering Excellence Guaranteed',
+        'contact-excellence-text': 'Magnum Technology delivers comprehensive engineering solutions that meet stringent industry standards and exceed client performance expectations.',
+        'contact-excellence-assessment': 'Comprehensive technical assessment',
+        'contact-excellence-solutions': 'Custom engineering solutions',
+        'contact-excellence-experience': '13+ years of experience',
+
+        // Footer
+        'footer-copyright': '© 2025 magnum-technology.eu. All Rights Reserved.'
+      },
+      ro: {
+        // Navigation
+        'nav-home': 'Acasă',
+        'nav-about': 'Despre Noi',
+        'nav-portfolio': 'Portofoliu',
+        'nav-contact': 'Contact',
+
+        // Hero section
+        'hero-title': 'MAGNUM TECHNOLOGY',
+        'hero-subtitle': 'Excelență în Inginerie prin Inovație',
+        'hero-contact': 'Contactează-ne',
+
+        // About section
+        'about-title': 'Cine Suntem',
+        'about-text1': 'Magnum Technology se specializează în tehnologii avansate și sisteme de automatizare. Expertiza noastră generează rezultate măsurabile pentru clienți din diverse industrii.',
+        'about-text2': 'Oferim soluții complete de inginerie prin metodologii inovatoare de design și standarde riguroase de calitate. Angajamentul nostru pentru precizie și funcționalitate asigură performanțe optime pentru fiecare proiect.',
+
+        // Services section
+        'services-title': 'Servicii de Inginerie',
+        'services-subtitle': 'Soluții Avansate de Inginerie Virtuală și Manufacturing Competitiv',
+        'services-competencies': 'Competențe Principale',
+        'services-industries': 'Sectoare Industriale',
+        'services-capabilities': 'Capabilități Tehnice',
+
+        // Projects section
+        'projects-title': 'EXEMPLE DE PROIECTE',
+        'projects-subtitle': 'Demonstrând excelența noastră în inginerie prin soluții inovatoare și măiestrie precisă',
+        'projects-view-all': 'Vezi Toate Proiectele',
+
+        // Contact section
+        'contact-text': 'Magnum Technology oferă soluții complete de inginerie care respectă standardele stricte ale industriei și specificațiile clienților din multiple discipline tehnice.',
+        'contact-form-title': 'Consultanță Profesională',
+        'contact-form-subtitle': 'Solicită Informații Tehnice',
+        'contact-name': 'Nume',
+        'contact-phone': 'Telefon',
+        'contact-company': 'Companie',
+        'contact-email': 'Email',
+        'contact-position': 'Poziție',
+        'contact-send': 'Trimite Mesajul',
+
+        // About page
+        'aboutPage-title': 'DESPRE NOI',
+        'aboutPage-commitment': 'Angajați pentru Excelență',
+        'aboutPage-text1': 'Magnum Technology se specializează în soluții de inginerie personalizate prin analiză tehnică riguroasă și metodologii de manufacturing de precizie.',
+        'aboutPage-text2': 'Echipele noastre de inginerie oferă soluții de design complete care respectă standardele stricte ale industriei și specificațiile clienților din multiple sectoare.',
+        'aboutPage-contactButton': 'CONTACTEAZĂ-NE',
+        'aboutPage-coreStrength': 'Punctele Noastre Forte',
+        'aboutPage-strength1': 'Realizăm evaluări tehnice complete prin colaborare strategică cu organizațiile clienților la niveluri executive și operaționale',
+        'aboutPage-strength2': 'Proiectăm și dezvoltăm soluții de inginerie cu documentație tehnică completă, incluzând desene de precizie și specificații de manufacturing',
+        'aboutPage-strength3': 'Oferim supraveghere tehnică și suport de inginerie pe tot parcursul ciclului de producție pentru a asigura standardele de calitate',
+        'aboutPage-strength4': 'Coordonăm subcontractorii și managementul proiectelor pentru a asigura livrarea la timp și conformitatea tehnică',
+        'aboutPage-strength5': 'Menținem disciplină riguroasă în proiecte cu organizare sistematică, execuție precisă și comunicare clară cu părțile interesate',
+        'aboutPage-credentials': 'Credențiale',
+        'aboutPage-qualifications': 'Calificări',
+        'aboutPage-qualification1': '• Inginer Certificat în Design Mecanic',
+        'aboutPage-qualification2': '• Master în Științe: Inginerie Virtuală și Manufacturing Competitiv',
+        'aboutPage-qualification3': '• Licențiat în Inginerie Mecanică: Construcția de Mașini',
+        'aboutPage-qualification4': '• 13+ ani de experiență',
+        'aboutPage-globalExperience': 'Experiență Globală',
+        'aboutPage-globalExperienceText': 'România (Cluj, Sibiu, Oradea, Bistrița, București), Regatul Unit, Austria, Spania, China, EAU',
+        'aboutPage-partnerCompanies': 'Companii Partenere',
+        'aboutPage-partnerCompaniesText': 'Emerson, Accenture, Bosch, NTT, ULMA Packaging, TURBOMECANICA, CSi Romania, GRUPO PACADAR, Tehnosteel Industry SRL, Bertrandt Group',
+
+        // Portfolio page
+        'portfolioPage-title': 'PORTOFOLIU',
+        'portfolioPage-subtitle': 'Magnum Technology a stabilit parteneriate strategice cu clienți din industrie pentru a livra soluții complete de inginerie care conduc la excelență operațională și îmbunătățiri măsurabile ale performanței. Portofoliul nostru demonstrează precizie tehnică, metodologii sistematice de inginerie și aderarea strictă la standardele internaționale de calitate în toate livrabilele de proiect.',
+        'portfolioPage-highlights': 'Excelență în Inginerie',
+        'portfolioPage-industriesServed': 'Parteneriate din Industrie',
+        'portfolioPage-keyTechnologies': 'Tehnologii Cheie',
+        'portfolioPage-projects-assembly-title': 'Stația Liniei de Asamblare',
+        'portfolioPage-projects-assembly-description': 'Sisteme de asamblare automatizate proiectate cu precizie pentru productivitate optimă în manufacturing și asigurarea calității.',
+        'portfolioPage-projects-quality-title': 'Sistem de Verificare a Calității',
+        'portfolioPage-projects-quality-description': 'Sisteme avansate de metrologie și inspecție care asigură conformitatea cu specificațiile stricte ale industriei și cerințele de reglementare.',
+        'portfolioPage-projects-material-title': 'Manipularea Materialelor',
+        'portfolioPage-projects-material-description': 'Sisteme integrate de transport materiale proiectate pentru optimizarea fluxului de lucru și eficiența operațională.',
+        'portfolioPage-projects-plc-title': 'Programare PLC',
+        'portfolioPage-projects-plc-description': 'Programare avansată PLC Siemens și soluții de automatizare industrială pentru medii complexe de manufacturing.',
+        'portfolioPage-projects-educational-title': 'Soluții Educaționale',
+        'portfolioPage-projects-educational-description': 'Sisteme profesionale de formare și platforme educaționale de automatizare pentru dezvoltarea competențelor tehnice și programe de certificare.',
+        'portfolioPage-projects-tooling-title': 'Scule Personalizate',
+        'portfolioPage-projects-tooling-description': 'Dispozitive manufacturate cu precizie și soluții de scule specializate proiectate pentru productivitate îmbunătățită și acuratețe dimensională.',
+        'portfolioPage-technologies-solidworks': 'Modelare 3D SolidWorks',
+        'portfolioPage-technologies-eplan': 'Design Electric E-plan',
+        'portfolioPage-technologies-siemens': 'Programare PLC Siemens',
+        'portfolioPage-technologies-automation': 'Sisteme de Automatizare',
+
+        // Contact page
+        'contact-page-title': 'CONTACTEAZĂ-NE',
+        'contact-page-subtitle': 'Inițiază consultanța pentru proiectul tău de inginerie cu specialiștii noștri tehnici. Oferim evaluare cuprinzătoare a proiectului, revizuirea specificațiilor tehnice și planificarea strategică a implementării.',
+        'contact-consultation-title': 'Consultanță Tehnică',
+        'contact-info-phone': 'Telefon',
+        'contact-info-phoneAction': 'Programează consultanță',
+        'contact-info-email': 'Email',
+        'contact-info-emailAction': 'Solicită informații despre proiect',
+        'contact-info-response': 'Timp de Răspuns',
+        'contact-info-responseText': 'Răspuns profesional în 24 de ore',
+        'contact-form-inquiry': 'Cerere de Proiect',
+        'contact-message': 'Mesaj',
+        'contact-excellence-title': 'Excelență în Inginerie Garantată',
+        'contact-excellence-text': 'Magnum Technology oferă soluții complete de inginerie care întrunesc standardele stricte ale industriei și depășesc așteptările de performanță ale clienților.',
+        'contact-excellence-assessment': 'Evaluare tehnică cuprinzătoare',
+        'contact-excellence-solutions': 'Soluții personalizate de inginerie',
+        'contact-excellence-experience': '13+ ani de experiență',
+
+        // Footer
+        'footer-copyright': '© 2025 magnum-technology.eu. Toate drepturile rezervate.'
+      }
+    };
+
+    // Update navigation
+    const navItems = document.querySelectorAll('[data-translate]');
+    navItems.forEach(item => {
+      const key = item.getAttribute('data-translate');
+      if (translations[lang][key]) {
+        item.textContent = translations[lang][key];
+      }
+    });
+
+    // Update text content
+    Object.keys(translations[lang]).forEach(key => {
+      const elements = document.querySelectorAll(`[data-text="${key}"]`);
+      elements.forEach(el => {
+        el.textContent = translations[lang][key];
+      });
+    });
+  }
+</script>

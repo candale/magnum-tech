@@ -1,0 +1,161 @@
+{
+  "nav": {
+    "home": "Acasă",
+    "about": "Despre Noi",
+    "portfolio": "Portofoliu"
+  },
+  "hero": {
+    "title": "MAGNUM TECHNOLOGY",
+    "subtitle": "Excelență în Inginerie prin Inovație",
+    "contact": "Contactează-ne"
+  },
+  "about": {
+    "title": "Cine Suntem",
+    "text1": "Magnum Technology se specializează în tehnologii avansate și sisteme de automatizare. Expertiza noastră generează rezultate măsurabile pentru clienți din diverse industrii.",
+    "text2": "Oferim soluții complete de inginerie prin metodologii inovatoare de design și standarde riguroase de calitate. Angajamentul nostru pentru precizie și funcționalitate asigură performanțe optime pentru fiecare proiect."
+  },
+  "services": {
+    "title": "Servicii de Inginerie",
+    "subtitle": "Soluții Avansate de Inginerie Virtuală și Manufacturing Competitiv",
+    "competencies": "Competențe Principale",
+    "industries": "Sectoare Industriale",
+    "capabilities": "Capabilități Tehnice",
+    "items": {
+      "assembly": "Sisteme de linii de asamblare și componente automatizate",
+      "loading": "Sisteme automatizate de încărcare/descărcare",
+      "conveyors": "Design și integrare sisteme de transport",
+      "verification": "Sisteme de verificare a calității",
+      "transfers": "Design mecanisme de transfer",
+      "customizations": "Inginerie personalizată specializată",
+      "manufacturing": "Manufacturing Avansat",
+      "automotive": "Automotive",
+      "construction": "Construcții",
+      "electronics": "Electronică și Manipulare Materiale",
+      "fixtures": "Dispozitive de Precizie și Scule",
+      "mechanical": "Design mecanic avansat (SolidWorks)",
+      "electrical": "Design sisteme electrice (E-plan)",
+      "plc": "Programare PLC Siemens",
+      "equipment": "Manufacturing echipamente personalizate"
+    }
+  },
+  "projects": {
+    "title": "EXEMPLE DE PROIECTE",
+    "subtitle": "Demonstrând excelența noastră în inginerie prin soluții inovatoare și măiestrie precisă",
+    "viewAll": "Vezi Toate Proiectele",
+    "items": {
+      "assembly": {
+        "title": "Sistem de Asamblare Automatizat",
+        "description": "Soluție avansată de automatizare manufacturing"
+      },
+      "conveyor": {
+        "title": "Sistem de Control Transport",
+        "description": "Sistem industrial de manipulare materiale"
+      },
+      "quality": {
+        "title": "Echipament de Testare Calitate",
+        "description": "Sistem de testare și verificare de precizie"
+      },
+      "robotic": {
+        "title": "Stație de Lucru Robotizată",
+        "description": "Stație de lucru manufacturing automatizată"
+      },
+      "plc": {
+        "title": "Panou de Control PLC",
+        "description": "Sistem de control electric personalizat"
+      },
+      "machinery": {
+        "title": "Utilaje Industriale",
+        "description": "Echipament de producție specializat"
+      }
+    }
+  },
+  "contact": {
+    "text": "Magnum Technology oferă soluții complete de inginerie care respectă standardele stricte ale industriei și specificațiile clienților din multiple discipline tehnice.",
+    "form": {
+      "title": "Consultanță Profesională",
+      "subtitle": "Solicită Informații Tehnice",
+      "name": "Nume",
+      "phone": "Telefon",
+      "company": "Companie",
+      "email": "Email",
+      "position": "Poziție",
+      "send": "Trimite Mesajul"
+    },
+    "info": {
+      "phone": "Telefon",
+      "email": "Email",
+      "response": "Timp de Răspuns",
+      "responseText": "Răspuns profesional în 24 de ore",
+      "phoneAction": "Programează consultanță",
+      "emailAction": "Solicită informații despre proiect"
+    }
+  },
+  "aboutPage": {
+    "title": "DESPRE NOI",
+    "commitment": "Angajați pentru Excelență",
+    "text1": "Magnum Technology se specializează în soluții de inginerie personalizate prin analiză tehnică riguroasă și metodologii de manufacturing de precizie.",
+    "text2": "Echipele noastre de inginerie oferă soluții de design complete care respectă standardele stricte ale industriei și specificațiile clienților din multiple sectoare.",
+    "coreStrength": "Punctele Noastre Forte",
+    "credentials": "Credențiale",
+    "qualifications": "Calificări",
+    "globalExperience": "Experiență Globală",
+    "partnerCompanies": "Companii Partenere",
+    "strengths": {
+      "assessment": "Realizăm evaluări tehnice complete prin colaborare strategică cu organizațiile clienților la niveluri executive și operaționale",
+      "solutions": "Proiectăm și dezvoltăm soluții de inginerie cu documentație tehnică completă, incluzând desene de precizie și specificații de manufacturing",
+      "oversight": "Oferim supraveghere tehnică și suport de inginerie pe tot parcursul ciclului de producție pentru a asigura standardele de calitate",
+      "coordination": "Coordonăm subcontractorii și managementul proiectelor pentru a asigura livrarea la timp și conformitatea tehnică",
+      "discipline": "Menținem disciplină riguroasă în proiecte cu organizare sistematică, execuție precisă și comunicare clară cu părțile interesate"
+    },
+    "qualificationsList": {
+      "certified": "Inginer Certificat în Design Mecanic",
+      "master": "Master în Științe: Inginerie Virtuală și Manufacturing Competitiv",
+      "bachelor": "Licențiat în Inginerie Mecanică: Construcția de Mașini",
+      "experience": "13+ ani de experiență"
+    },
+    "globalText": "România (Cluj, Sibiu, Oradea, Bistrița, București), Regatul Unit, Austria, Spania, China, EAU",
+    "partnersText": "Emerson, Accenture, Bosch, NTT, ULMA Packaging, TURBOMECANICA, CSi Romania, GRUPO PACADAR, Tehnosteel Industry SRL, Bertrandt Group"
+  },
+  "portfolioPage": {
+    "title": "PORTOFOLIU",
+    "subtitle": "Magnum Technology a stabilit parteneriate strategice cu clienți din industrie pentru a livra soluții complete de inginerie care conduc la excelență operațională și îmbunătățiri măsurabile ale performanței. Portofoliul nostru demonstrează precizie tehnică, metodologii sistematice de inginerie și aderarea strictă la standardele internaționale de calitate în toate livrabilele de proiect.",
+    "highlights": "Excelență în Inginerie",
+    "industriesServed": "Parteneriate din Industrie",
+    "keyTechnologies": "Tehnologii Cheie",
+    "projects": {
+      "assembly": {
+        "title": "Stația Liniei de Asamblare",
+        "description": "Sisteme de asamblare automatizate proiectate cu precizie pentru productivitate optimă în manufacturing și asigurarea calității."
+      },
+      "quality": {
+        "title": "Sistem de Verificare a Calității",
+        "description": "Sisteme avansate de metrologie și inspecție care asigură conformitatea cu specificațiile stricte ale industriei și cerințele de reglementare."
+      },
+      "material": {
+        "title": "Manipularea Materialelor",
+        "description": "Sisteme integrate de transport materiale proiectate pentru optimizarea fluxului de lucru și eficiența operațională."
+      },
+      "plc": {
+        "title": "Programare PLC",
+        "description": "Programare avansată PLC Siemens și soluții de automatizare industrială pentru medii complexe de manufacturing."
+      },
+      "educational": {
+        "title": "Soluții Educaționale",
+        "description": "Sisteme profesionale de formare și platforme educaționale de automatizare pentru dezvoltarea competențelor tehnice și programe de certificare."
+      },
+      "tooling": {
+        "title": "Scule Personalizate",
+        "description": "Dispozitive manufacturate cu precizie și soluții de scule specializate proiectate pentru productivitate îmbunătățită și acuratețe dimensională."
+      }
+    },
+    "technologies": {
+      "solidworks": "Modelare 3D SolidWorks",
+      "eplan": "Design Electric E-plan",
+      "siemens": "Programare PLC Siemens",
+      "automation": "Sisteme de Automatizare"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 magnum-technology.eu. Toate drepturile rezervate."
+  }
+}

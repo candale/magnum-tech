@@ -1,0 +1,114 @@
+{
+  "companyInfo": {
+    "name": "MAGNUM TECHNOLOGY",
+    "tagline": "Where Engineering Meets Creativity",
+    "description": "We are driven by a passion for leveraging technology and automation systems.",
+    "mission": "We specialize in developing innovative, tailored engineering solutions, with meticulous attention to detail. We are dedicated to providing professional and highly functional designs that address the unique requirements of clients across industries.",
+    "phone": "+40 756 618 998",
+    "email": "office@magnum-technology.eu",
+    "copyright": "© 2025 magnum-technology.eu. All Rights Reserved."
+  },
+  "heroSection": {
+    "title": "MAGNUM TECHNOLOGY",
+    "subtitle": "Where Engineering Meets Creativity",
+    "ctaButtons": ["CONTACT US", "+40 756 618 998"]
+  },
+  "aboutUs": {
+    "title": "WHO WE ARE",
+    "subtitle": "We Always Make The Best.",
+    "description": "We specialize in developing innovative, tailored engineering solutions, with meticulous attention to details. We are dedicated to providing professional and highly functional designs that address the unique requirements of clients across industries."
+  },
+  "team": {
+    "title": "Meet Magnum technology team",
+    "subtitle": "Master of Science Virtual Engineering Competitive Manufacturing"
+  },
+  "expertise": {
+    "title": "Expertise",
+    "services": [
+      "Assembly line stations, equipment, components",
+      "Loading/unloading",
+      "Conveyors",
+      "Verification",
+      "Transfers Extensions",
+      "Customizations"
+    ]
+  },
+  "industries": {
+    "title": "Industries",
+    "sectors": [
+      "Manufacturing",
+      "Automotive",
+      "Construction",
+      "Electronics Material handling Carton, pallet",
+      "Fixtures / tools"
+    ]
+  },
+  "capabilities": {
+    "title": "Capabilities",
+    "services": [
+      "Mechanical design services (concept, 3D modeling, 2D drawings) -SolidWorks",
+      "Electrical design services (E-plan)",
+      "Siemens PLC programming services",
+      "Produce special equipment"
+    ]
+  },
+  "coreStrength": {
+    "title": "Our Core Strength",
+    "points": [
+      "Review and identify problems in strong collaboration with client teams (at all levels of the organization)",
+      "Propose and develop technical solutions, including creation of technical drawings, designs, and blueprints",
+      "Work closely with execution teams to support the production process",
+      "Manage subcontractors and overall project execution",
+      "Demonstrate discipline, strong organization, attention to detail, innovative thinking, and excellent communication skills"
+    ]
+  },
+  "credentials": {
+    "title": "Credentials:",
+    "qualifications": [
+      "Certified Mechanical Design Engineer",
+      "Master of Science: Virtual Engineering and Competitive Manufacturing",
+      "Bachelor of Mechanical Engineering: Machine Building",
+      "13+ years of experience Partners that endorse Florin's professionalism, skills, and expertise: Global: Romania (Cluj, Sibiu, Oradea, Bistrița, Bucharest), United Kingdom, Austria, Spain, China, UAE"
+    ],
+    "companies": [
+      "Select companies: Emerson, Accenture, Bosch, NTT, ULMA Packaging, TURBOMECANICA, CSi Romania, GRUPO PACADAR, Tehnosteel Industry SRL, Bertrandt Group"
+    ],
+    "roles": [
+      "Job titles: Group CEO, Country Managing Director, Data Engineer, Mechanical Design Engineer, Production Engineer, Quality Assurance Specialist, Software Engineer, Program Manager, Marketing Manager, Topographic Engineer"
+    ]
+  },
+  "portfolio": {
+    "title": "PORTFOLIO",
+    "description": "Over the years, we have had the privilege to collaborate with leading companies and deliver engineering solutions that combine technical expertise with practical, real-world impact. Our work reflects a balance between creativity, efficiency, and attention to detail ensuring every project meets the highest standards of quality.",
+    "projectsSectionTitle": "PROJECTS SAMPLES",
+    "images": [
+      "https://magnum-technology.eu/wp-content/uploads/2025/09/6-1.png",
+      "https://magnum-technology.eu/wp-content/uploads/2025/09/5.png",
+      "https://magnum-technology.eu/wp-content/uploads/2025/09/4.png",
+      "https://magnum-technology.eu/wp-content/uploads/2025/09/3.png",
+      "https://magnum-technology.eu/wp-content/uploads/2025/09/2.png",
+      "https://magnum-technology.eu/wp-content/uploads/2025/09/1.png"
+    ]
+  },
+  "contact": {
+    "title": "CONTACT US",
+    "description": "We'd love to hear from you! Whether you have questions, need more information about our services, or want to discuss a potential project, our team is here to help.",
+    "phone": "0756 618 998",
+    "email": "office@magnum-technology.eu",
+    "socialLinks": ["Facebook", "Twitter", "Google-plus", "Youtube", "Github"],
+    "formFields": ["Name", "Email", "Message"],
+    "ctaSection": {
+      "subtitle": "We Are Here To Assist You",
+      "title": "contact us today",
+      "formFields": ["Name", "Phone", "Company", "Email", "Position"]
+    }
+  },
+  "navigation": {
+    "links": ["HOME", "ABOUT US", "OUR PORTFOLIO", "CONTACT US"]
+  },
+  "colorScheme": {
+    "primary": "Professional blue/tech colors based on visual inspection",
+    "secondary": "White/light backgrounds",
+    "accent": "Orange/red for CTAs"
+  }
+}

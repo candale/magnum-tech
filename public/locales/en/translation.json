@@ -1,0 +1,161 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio"
+  },
+  "hero": {
+    "title": "MAGNUM TECHNOLOGY",
+    "subtitle": "Engineering Excellence Through Innovation",
+    "contact": "Contact Us"
+  },
+  "about": {
+    "title": "Who We Are",
+    "text1": "Magnum Technology specializes in advanced technology and automation systems. Our expertise drives measurable results for clients across diverse industries.",
+    "text2": "We deliver comprehensive engineering solutions through innovative design methodologies and rigorous quality standards. Our commitment to precision and functionality ensures optimal performance for every client engagement."
+  },
+  "services": {
+    "title": "Engineering Services",
+    "subtitle": "Advanced Virtual Engineering & Competitive Manufacturing Solutions",
+    "competencies": "Core Competencies",
+    "industries": "Industry Sectors",
+    "capabilities": "Technical Capabilities",
+    "items": {
+      "assembly": "Assembly line systems and automated components",
+      "loading": "Automated loading/unloading systems",
+      "conveyors": "Conveyor system design and integration",
+      "verification": "Quality verification systems",
+      "transfers": "Transfer mechanism design",
+      "customizations": "Specialized custom engineering",
+      "manufacturing": "Advanced Manufacturing",
+      "automotive": "Automotive",
+      "construction": "Construction",
+      "electronics": "Electronics & Material Handling",
+      "fixtures": "Precision Fixtures & Tooling",
+      "mechanical": "Advanced mechanical design (SolidWorks)",
+      "electrical": "Electrical systems design (E-plan)",
+      "plc": "Siemens PLC programming",
+      "equipment": "Custom equipment manufacturing"
+    }
+  },
+  "projects": {
+    "title": "PROJECT SAMPLES",
+    "subtitle": "Showcasing our engineering excellence through innovative solutions and precision craftsmanship",
+    "viewAll": "View All Projects",
+    "items": {
+      "assembly": {
+        "title": "Automated Assembly System",
+        "description": "Advanced manufacturing automation solution"
+      },
+      "conveyor": {
+        "title": "Conveyor Control System",
+        "description": "Industrial material handling system"
+      },
+      "quality": {
+        "title": "Quality Testing Equipment",
+        "description": "Precision testing and verification system"
+      },
+      "robotic": {
+        "title": "Robotic Workstation",
+        "description": "Automated manufacturing workstation"
+      },
+      "plc": {
+        "title": "PLC Control Panel",
+        "description": "Custom electrical control system"
+      },
+      "machinery": {
+        "title": "Industrial Machinery",
+        "description": "Specialized production equipment"
+      }
+    }
+  },
+  "contact": {
+    "text": "Magnum Technology delivers comprehensive engineering solutions that meet stringent industry standards and client specifications across multiple technical disciplines.",
+    "form": {
+      "title": "Professional Consultation",
+      "subtitle": "Request Technical Information",
+      "name": "Name",
+      "phone": "Phone",
+      "company": "Company",
+      "email": "Email",
+      "position": "Position",
+      "send": "Send Message"
+    },
+    "info": {
+      "phone": "Phone",
+      "email": "Email",
+      "response": "Response Time",
+      "responseText": "Professional response within 24 hours",
+      "phoneAction": "Schedule consultation",
+      "emailAction": "Request project information"
+    }
+  },
+  "aboutPage": {
+    "title": "ABOUT US",
+    "commitment": "Committed to Excellence",
+    "text1": "Magnum Technology specializes in customized engineering solutions through rigorous technical analysis and precision manufacturing methodologies.",
+    "text2": "Our engineering teams deliver comprehensive design solutions that meet stringent industry standards and client specifications across multiple sectors.",
+    "coreStrength": "Our Core Strength",
+    "credentials": "Credentials",
+    "qualifications": "Qualifications",
+    "globalExperience": "Global Experience",
+    "partnerCompanies": "Partner Companies",
+    "strengths": {
+      "assessment": "Conduct comprehensive technical assessments through strategic collaboration with client organizations at executive and operational levels",
+      "solutions": "Design and develop engineering solutions with complete technical documentation, including precision drawings and manufacturing specifications",
+      "oversight": "Provide technical oversight and engineering support throughout the production lifecycle to ensure quality standards",
+      "coordination": "Direct subcontractor coordination and project management to ensure timely delivery and technical compliance",
+      "discipline": "Maintain rigorous project discipline with systematic organization, precision execution, and clear stakeholder communication"
+    },
+    "qualificationsList": {
+      "certified": "Certified Mechanical Design Engineer",
+      "master": "Master of Science: Virtual Engineering and Competitive Manufacturing",
+      "bachelor": "Bachelor of Mechanical Engineering: Machine Building",
+      "experience": "13+ years of experience"
+    },
+    "globalText": "Romania (Cluj, Sibiu, Oradea, Bistrița, Bucharest), United Kingdom, Austria, Spain, China, UAE",
+    "partnersText": "Emerson, Accenture, Bosch, NTT, ULMA Packaging, TURBOMECANICA, CSi Romania, GRUPO PACADAR, Tehnosteel Industry SRL, Bertrandt Group"
+  },
+  "portfolioPage": {
+    "title": "PORTFOLIO",
+    "subtitle": "Magnum Technology has established strategic partnerships with industry clients to deliver comprehensive engineering solutions that drive operational excellence and measurable performance improvements. Our portfolio demonstrates technical precision, systematic engineering methodologies, and strict adherence to international quality standards across all project deliverables.",
+    "highlights": "Engineering Excellence",
+    "industriesServed": "Industry Partnerships",
+    "keyTechnologies": "Key Technologies",
+    "projects": {
+      "assembly": {
+        "title": "Assembly Line Station",
+        "description": "Precision-engineered automated assembly systems designed for optimal manufacturing throughput and quality assurance."
+      },
+      "quality": {
+        "title": "Quality Verification System",
+        "description": "Advanced metrology and inspection systems ensuring compliance with stringent industry specifications and regulatory requirements."
+      },
+      "material": {
+        "title": "Material Handling",
+        "description": "Integrated material transport systems engineered for seamless workflow optimization and operational efficiency."
+      },
+      "plc": {
+        "title": "PLC Programming",
+        "description": "Advanced Siemens PLC programming and industrial automation solutions for complex manufacturing environments."
+      },
+      "educational": {
+        "title": "Educational Solutions",
+        "description": "Professional training systems and educational automation platforms for technical skill development and certification programs."
+      },
+      "tooling": {
+        "title": "Custom Tooling",
+        "description": "Precision-manufactured fixtures and specialized tooling solutions designed for enhanced productivity and dimensional accuracy."
+      }
+    },
+    "technologies": {
+      "solidworks": "SolidWorks 3D Modeling",
+      "eplan": "E-plan Electrical Design",
+      "siemens": "Siemens PLC Programming",
+      "automation": "Automation Systems"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 magnum-technology.eu. All Rights Reserved."
+  }
+}

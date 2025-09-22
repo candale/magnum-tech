@@ -1,0 +1,18 @@
+#!/bin/bash
+
+case "$1" in
+    "build")
+        echo "Building the project..."
+        npm run build
+        ;;
+    "serve")
+        echo "Serving the website..."
+        npm run dev
+        ;;
+    *)
+        echo "Usage: ./run {build|serve}"
+        echo "  build - Build the project"
+        echo "  serve - Serve the website in development mode"
+        exit 1
+        ;;
+esac
