@@ -1,4 +1,6 @@
-# MAGNUM TECHNOLOGY - Website Clone
+# MAGNUM TECHNOLOGY
+
+IMPORTANT: generated completely with Claude Code (likfely very messy).
 
 A modern, responsive clone of the Magnum Technology website built with Astro and Tailwind CSS.
 
